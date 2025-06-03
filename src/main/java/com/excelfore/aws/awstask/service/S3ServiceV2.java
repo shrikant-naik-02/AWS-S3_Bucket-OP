@@ -107,7 +107,6 @@ public class S3ServiceV2 {
         return objName;
     }
 
-
     public PresignedUrlResponse getValidPresignedUrlForDownload(String objectName) {
 
         if (!commonAWSOp.doesObjectExists(objectName)) {
@@ -125,7 +124,6 @@ public class S3ServiceV2 {
         );
 
     }
-
 
     public byte[] downloadFileWithPresign(String presignedUrl) {
 
