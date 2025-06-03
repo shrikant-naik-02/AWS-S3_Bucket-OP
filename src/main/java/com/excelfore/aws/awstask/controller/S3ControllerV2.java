@@ -7,9 +7,6 @@ import com.excelfore.aws.awstask.service.S3ServiceV2;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
-import org.springframework.http.ContentDisposition;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -56,18 +53,7 @@ public class S3ControllerV2 {
         log.info("Downloading from presigned URL: {}", presignedUrl);
 
         byte[] fileBytes = s3ServiceV2.downloadFileWithPresign(presignedUrl);
-        String fileName = "downloaded-file";
-
-        HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
-        headers.setContentDisposition(ContentDisposition
-                .attachment()
-                .filename(fileName)
-                .build());
-
-        return ResponseEntity.ok()
-                .headers(headers)
-                .body(fileBytes);
+        return ResponseEntity.ok().body(fileBytes);
     }
 
     @GetMapping("/list")

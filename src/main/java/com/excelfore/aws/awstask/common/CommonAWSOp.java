@@ -2,13 +2,12 @@ package com.excelfore.aws.awstask.common;
 
 import com.excelfore.aws.awstask.exception.EmptyFileException;
 import com.excelfore.aws.awstask.exception.PresignedUrlExpiredException;
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.beans.factory.annotation.Value;
@@ -25,8 +24,6 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-
-import com.excelfore.aws.awstask.exception.FileDownloadException;
 import java.io.IOException;
 import java.time.Duration;
 import java.time.Instant;
@@ -50,7 +47,7 @@ public class CommonAWSOp {
                     .key(key)
                     .build();
 
-            HeadObjectResponse headObjectResponse = s3Client.headObject(headObjectRequest);
+            s3Client.headObject(headObjectRequest);
             // At this line status code - 200 Only
             return true;
 
@@ -140,21 +137,21 @@ public class CommonAWSOp {
 
             if (response.statusCode() == 403) {
                 log.warn("Presigned URL has expired.");
-                throw new PresignedUrlExpiredException("Presigned URL Get expired");
+                throw new PresignedUrlExpiredException("Presigned URL Get expired or URL get manipulated");
             }
 
             if (response.statusCode() == 200) {
                 return;
             }
 
-        } catch (InterruptedException | IOException e) {
+        } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
             log.error("Upload interrupted. Message: {}", e.getMessage());
             throw new RuntimeException("Upload interrupted", e);
 
-        } catch (Exception e) {
-            log.error("Error uploading from presigned URL. Message: {}", e.getMessage());
-            throw new RuntimeException("Upload failed", e);
+        } catch (IOException e) {
+            log.error("I/O error during upload. Message: {}", e.getMessage());
+            throw new RuntimeException("Upload failed due to I/O error", e);
 
         }
     }
@@ -170,20 +167,10 @@ public class CommonAWSOp {
 
             HttpResponse<byte[]> response = client.send(request, HttpResponse.BodyHandlers.ofByteArray());
 
-            HttpHeaders headers = new HttpHeaders();
-            headers.setContentType(MediaType.parseMediaType(
-                    response.headers().firstValue("Content-Type").orElse("application/octet-stream"))
-            );
-            headers.setContentLength(response.body().length);
-
-            String filename = URI.create(presignedUrl).getPath().substring(1);
-            headers.setContentDispositionFormData("attachment", filename);
-
-//            return response.body();
-            log.info("im here ");
+            log.info("im here {} {}",response.statusCode(),response.toString());
             if (response.statusCode() == 403) {
                 log.warn("Presigned URL has expired.");
-                throw new PresignedUrlExpiredException("Presigned URL Get expired");
+                throw new PresignedUrlExpiredException("Presigned URL Get expired Or Url Get Manipulated");
             }
 
             if (response.statusCode() != 200) {
@@ -210,11 +197,6 @@ public class CommonAWSOp {
         } catch (IOException e) {
             log.error("I/O error during download. Message: {}", e.getMessage());
             throw new RuntimeException("Download failed due to I/O error", e);
-
-        }
-        catch (Exception e) {
-            log.error("Error downloading from presigned URL. Message: {}", e.getMessage());
-            throw new RuntimeException("Download failed", e);
 
         }
     }

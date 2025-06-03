@@ -7,29 +7,12 @@ import com.excelfore.aws.awstask.util.FileUtil;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
-import software.amazon.awssdk.core.ResponseInputStream;
-import software.amazon.awssdk.core.sync.RequestBody;
+
 import software.amazon.awssdk.services.s3.S3Client;
 import software.amazon.awssdk.services.s3.model.*;
-import software.amazon.awssdk.services.s3.presigner.S3Presigner;
-import software.amazon.awssdk.services.s3.presigner.model.GetObjectPresignRequest;
-import software.amazon.awssdk.services.s3.presigner.model.PresignedGetObjectRequest;
-import software.amazon.awssdk.services.s3.presigner.model.PresignedPutObjectRequest;
-import software.amazon.awssdk.services.s3.presigner.model.PutObjectPresignRequest;
 
-import java.io.IOException;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.security.NoSuchAlgorithmException;
-import java.time.Duration;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -40,25 +23,12 @@ import java.util.Optional;
 public class S3ServiceV2 {
 
     private final S3Client s3Client;
-    private final S3Presigner s3Presigner;
     private final CommonAWSOp commonAWSOp;
 
     private static final String FOLDER_NAME = "myBucket/";
 
     @Value("${aws.s3.bucket}")
     private String bucket;
-
-//    public List<String> listOfObjectKeyName(){
-//
-//        ListObjectsV2Request request = ListObjectsV2Request.builder()
-//                .bucket(bucket)
-//                .build();
-//        ListObjectsV2Response response = s3Client.listObjectsV2(request);
-//        log.info("Hi {} {} {}",response.name(), response.keyCount(), response.toString());
-//        log.info(String.valueOf(response.keyCount()));
-//        return response.contents().stream().map(S3Object::key).toList();
-//
-//    }
 
     public List<String> listOfObjectKeyName(Optional<String> startWith, Optional<String> endWith) {
         // Build request with prefix if available

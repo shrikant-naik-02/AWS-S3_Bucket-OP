@@ -36,34 +36,6 @@ public class FileUtil {
         return dotIndex > 0 && originalFileName.substring(0, dotIndex).matches(".*[a-zA-Z].*");
     }
 
-
-//    public static String computeSHA256Hash(MultipartFile file){
-//
-//        try {
-//            MessageDigest digest = MessageDigest.getInstance(HASH_ALGORITHM);
-//            byte[] hashBytes = digest.digest(file.getBytes());
-//
-//            StringBuilder sb = new StringBuilder();
-//            for (byte b : hashBytes) {
-//                sb.append(String.format("%02x", b));
-//            }
-//            return sb.toString();
-//
-//        } catch (NoSuchAlgorithmException e) {
-//            log.error("Hash algorithm not found: {}", e.getMessage());
-//            throw new HashAlgorithmNotFoundException("SHA-256 algorithm not available");
-//
-//        } catch (IOException e) {
-//            log.error("IOException while reading file: {}", e.getMessage());
-//            throw new RuntimeException("Failed to read uploaded file", e);
-//
-//        } catch (RuntimeException e) {
-//            log.error("Unexpected error during file hashing: {}", e.getMessage());
-//            throw new RuntimeException("Unexpected error during file hashing", e);
-//        }
-//
-//    }
-
     public static String computeSHA256Hash(MultipartFile file) {
         try (InputStream inputStream = file.getInputStream()) {
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
