@@ -49,7 +49,7 @@ public class S3ControllerV2 {
     }
 
     @PostMapping("/download-file-using-presigned-url")
-    public ResponseEntity<byte[]> downloadFileUsingPresigned(@RequestParam("presignedUrl") String presignedUrl) throws IOException {
+    public ResponseEntity<byte[]> downloadFileUsingPresigned(@RequestParam("presignedUrl") String presignedUrl) {
         log.info("Downloading from presigned URL: {}", presignedUrl);
 
         byte[] fileBytes = s3ServiceV2.downloadFileWithPresign(presignedUrl);
