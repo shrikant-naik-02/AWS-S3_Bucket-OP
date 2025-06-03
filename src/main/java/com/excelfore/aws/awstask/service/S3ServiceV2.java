@@ -41,7 +41,7 @@ public class S3ServiceV2 {
 
         List<String> keys = response.contents().stream()
                 .map(S3Object::key)
-                .filter(key -> endWith.map(key::endsWith).orElse(true)) // Still filter endsWith manually
+                .filter(key -> endWith.map(key::endsWith).orElse(true))
                 .toList();
 
         log.info("S3 list filtered - Prefix: '{}', Suffix: '{}', Returned: {}",
@@ -120,7 +120,7 @@ public class S3ServiceV2 {
         return new PresignedUrlResponse(
                 "Download",
                 url,
-                "5Min", // Or your actual expiration time in seconds
+                "5Min",
                 true
         );
 
