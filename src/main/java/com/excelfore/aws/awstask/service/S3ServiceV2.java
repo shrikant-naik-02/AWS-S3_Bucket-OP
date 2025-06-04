@@ -135,7 +135,7 @@ public class S3ServiceV2 {
             throw new NoSuchFilePresent("File Not exists with name: " + objName);
         }
 
-        return commonAWSOp.downloadFileWithPresignedUrl(presignedUrl);
+        return commonAWSOp.downloadFileWithPresignedUrl(presignedUrl,objName);
 
     }
 

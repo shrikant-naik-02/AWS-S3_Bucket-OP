@@ -169,7 +169,7 @@ public class CommonAWSOp {
     }
 
 
-    public byte[] downloadFileWithPresignedUrl(String presignedUrl) {
+    public byte[] downloadFileWithPresignedUrl(String presignedUrl, String objName) {
 
         try (HttpClient client = HttpClient.newHttpClient()) {
             HttpRequest request = HttpRequest.newBuilder()
@@ -190,13 +190,25 @@ public class CommonAWSOp {
                 throw new RuntimeException("Failed to download file, status code: " + response.statusCode());
 
             }
-                // Now safe to assume body contains file bytes
-                byte[] fileBytes = response.body();
+
+            // Now safe to assume body contains file bytes
+            byte[] fileBytes = response.body();
 
             if (fileBytes == null || fileBytes.length == 0) {
                 log.warn("Downloaded file is empty.");
                 throw new EmptyFileException("Downloaded file is empty");
             }
+
+            // Update download count in DB
+            fileRepository.findByAwsFileName(objName)
+                    .ifPresentOrElse(
+                            fileMetadata -> {
+                                fileMetadata.setDownloadCount(fileMetadata.getDownloadCount() + 1);
+                                fileRepository.save(fileMetadata);
+                                log.info("Download count incremented for object: {}", objName);
+                            },
+                            () -> log.warn("No DB record found for object: {}", objName)
+                    );
 
             return fileBytes;
 
