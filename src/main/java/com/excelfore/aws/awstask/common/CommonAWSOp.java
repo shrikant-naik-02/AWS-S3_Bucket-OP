@@ -3,6 +3,8 @@ package com.excelfore.aws.awstask.common;
 import com.excelfore.aws.awstask.exception.EmptyFileException;
 import com.excelfore.aws.awstask.exception.PresignedUrlExpiredException;
 
+import com.excelfore.aws.awstask.model.File;
+import com.excelfore.aws.awstask.repository.FileRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -36,6 +38,9 @@ public class CommonAWSOp {
 
     @Value("${aws.s3.bucket}")
     private String bucket;
+
+    private final FileRepository fileRepository;
+
 
     public boolean doesObjectExists(String key){
 
@@ -139,7 +144,15 @@ public class CommonAWSOp {
             }
 
             if (response.statusCode() == 200) {
-                // my db code
+                // Save to DB
+                final String originalFilename = file.getOriginalFilename();
+
+                File fileRecord = new File();
+                fileRecord.setFileName(originalFilename);
+                fileRecord.setAwsFileName(objName);
+                fileRecord.setDownloadCount(0); // Initial count
+
+                fileRepository.save(fileRecord);
                 return;
             }
 
