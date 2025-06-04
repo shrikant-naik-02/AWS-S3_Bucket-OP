@@ -1,6 +1,7 @@
 package com.excelfore.aws.awstask.common;
 
 import com.excelfore.aws.awstask.exception.EmptyFileException;
+import com.excelfore.aws.awstask.exception.NoSuchFilePresent;
 import com.excelfore.aws.awstask.exception.PresignedUrlExpiredException;
 
 import com.excelfore.aws.awstask.model.File;
@@ -99,10 +100,15 @@ public class CommonAWSOp {
         }
         else{
 
+            // key is the awsFileName used in S3
+            File file = fileRepository.findByAwsFileName(key)
+                    .orElseThrow(() -> new NoSuchFilePresent("File not found"));
+
+
             GetObjectRequest getRequest = GetObjectRequest.builder()
                     .bucket(bucket)
                     .key(key)
-                    .responseContentDisposition("attachment; filename=\"" + key + "\"")
+                    .responseContentDisposition("attachment; filename=\"" + file.getFileName() + "\"")
                     .build();
 
             PresignedGetObjectRequest presigned = s3Presigner.presignGetObject(
