@@ -44,14 +44,14 @@ public class S3ServiceV2 {
                 .filter(key -> endWith.map(key::endsWith).orElse(true))
                 .toList();
 
-        log.info("S3 list filtered - Prefix: '{}', Suffix: '{}', Returned: {}",
+        log.debug("S3 list filtered - Prefix: '{}', Suffix: '{}', Returned: {}",
                 startWith.orElse(""), endWith.orElse(""), keys.size());
 
         return keys;
     }
 
     public PresignedUrlResponse getValidPresignedUrlForUpload(MultipartFile file) {
-        log.info("file{} {}",file.isEmpty(), file.getSize());
+
         if (file.isEmpty() || file.getSize()==0){
            throw new EmptyFileException("File is null or empty");
         }
@@ -70,7 +70,7 @@ public class S3ServiceV2 {
         String hashHex = FileUtil.computeSHA256Hash(file);
 
         String key = FOLDER_NAME + hashHex;
-        log.info("Generated S3 object key: {}", key);
+        log.debug("Generated S3 object key: {}", key);
 
         if (commonAWSOp.doesObjectExists(key)) {
             throw new FileAlreadyExistsException("File already exists with name: " + key);
@@ -94,7 +94,7 @@ public class S3ServiceV2 {
         final String objName = urlData.get("objName");
 
         if (!currentFileHash.equalsIgnoreCase(shaKey)) {
-            log.info("mismatch");
+            log.debug("mismatch");
             throw new HashMismatchException("Hash mismatch — please upload the original file used to generate the URL.");
         }
 
@@ -110,7 +110,7 @@ public class S3ServiceV2 {
     public PresignedUrlResponse getValidPresignedUrlForDownload(String objectName) {
 
         if (!commonAWSOp.doesObjectExists(objectName)) {
-            log.info("File Not Exist There With Name {}", objectName);
+            log.debug("File Not Exist There With Name {}", objectName);
             throw new FileAlreadyExistsException("File Not Present There with name: " + objectName);
         }
 
@@ -131,7 +131,7 @@ public class S3ServiceV2 {
         final String objName = urlData.get("objName");
 
         if (!commonAWSOp.doesObjectExists(objName)) {
-            log.info("File Already There With Name {}", objName);
+            log.debug("File Already There With Name {}", objName);
             throw new NoSuchFilePresent("File Not exists with name: " + objName);
         }
 

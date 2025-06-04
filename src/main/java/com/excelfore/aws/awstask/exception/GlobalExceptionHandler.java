@@ -81,6 +81,12 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.FORBIDDEN).body(response);
     }
 
+    @ExceptionHandler(MultipleFileSelectionException.class)
+    public ResponseEntity<ApiResponse<Object>> handleMultipleFileSelection(MultipleFileSelectionException ex) {
+        ApiResponse<Object> response = buildErrorResponse(ex);
+        return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).body(response);
+    }
+
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ApiResponse<Object>> handleGenericException(Exception ex) {
         ApiResponse<Object> response = buildErrorResponse(ex);

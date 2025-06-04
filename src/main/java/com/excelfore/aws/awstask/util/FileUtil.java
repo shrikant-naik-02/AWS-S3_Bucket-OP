@@ -67,24 +67,18 @@ public class FileUtil {
 
 
     public static Map<String, String> extractFolderShaKeyAndObjName(String presignedUrl) {
-        log.info("lets start {}", presignedUrl);
         URI uri = URI.create(presignedUrl);
 
-        log.info("uri {}", uri);
         String path = uri.getPath(); // e.g. /myBucket/646d4fdf4sdf45dv
 
-        log.info("path {}", path);
         // Remove leading slash
         if (path.startsWith("/")) {
             path = path.substring(1);
         }
 
-        log.info("path2 {}", path);
         // Split into folderName and shaKey
         String[] parts = path.split("/", 2); // Split into folderName and shaKey
-        log.info("parts {}", (Object) parts);
         if (parts.length < 2) {
-            log.info("The actual error");
             throw new IllegalArgumentException("Invalid path format: " + path);
         }
 

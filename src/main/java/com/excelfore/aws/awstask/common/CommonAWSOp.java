@@ -131,7 +131,7 @@ public class CommonAWSOp {
                     .build();
 
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-            log.info("Response status code: {}", response.statusCode());
+            log.debug("Response status code: {}", response.statusCode());
 
             if (response.statusCode() == 403) {
                 log.warn("Presigned URL has expired.");
@@ -165,7 +165,7 @@ public class CommonAWSOp {
 
             HttpResponse<byte[]> response = client.send(request, HttpResponse.BodyHandlers.ofByteArray());
 
-            log.info("im here {} {}",response.statusCode(),response.toString());
+            log.debug("Response status code: {}", response.statusCode());
             if (response.statusCode() == 403) {
                 log.warn("Presigned URL has expired.");
                 throw new PresignedUrlExpiredException("Presigned URL Get expired Or Url Get Manipulated");
