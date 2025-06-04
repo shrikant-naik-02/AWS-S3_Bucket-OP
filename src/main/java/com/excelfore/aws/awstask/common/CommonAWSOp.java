@@ -130,7 +130,7 @@ public class CommonAWSOp {
         }
     }
 
-    public void uploadFileWithPresignedUrl(MultipartFile file, String presignedUrl, String objName) {
+    public void uploadFileWithPresignedUrl(MultipartFile file, String presignedUrl, String objName, String newFileName) {
 
         // Have To Check The Logic That Presigned Url Expired Or Not
 
@@ -151,10 +151,8 @@ public class CommonAWSOp {
 
             if (response.statusCode() == 200) {
                 // Save to DB
-                final String originalFilename = file.getOriginalFilename();
-
                 File fileRecord = new File();
-                fileRecord.setFileName(originalFilename);
+                fileRecord.setFileName(newFileName);
                 fileRecord.setAwsFileName(objName);
                 fileRecord.setDownloadCount(0); // Initial count
 

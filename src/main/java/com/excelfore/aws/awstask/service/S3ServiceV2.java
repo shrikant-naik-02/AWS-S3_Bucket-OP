@@ -15,6 +15,7 @@ import software.amazon.awssdk.services.s3.model.*;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Optional;
 
 @Service
@@ -102,7 +103,10 @@ public class S3ServiceV2 {
             throw new FileAlreadyExistsException("File already exists with name: " + objName);
         }
 
-        commonAWSOp.uploadFileWithPresignedUrl(file, presignedUrl, objName);
+        // 👇 Generate new filename using original name + UUID
+        String newFileName = FileUtil.generateNewFileNameWithUUID(Objects.requireNonNull(file.getOriginalFilename()));
+
+        commonAWSOp.uploadFileWithPresignedUrl(file, presignedUrl, objName, newFileName);
 
         return objName;
     }

@@ -11,6 +11,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 @Slf4j
 public class FileUtil {
@@ -92,6 +93,22 @@ public class FileUtil {
 
         return result;
     }
+
+    public static String generateNewFileNameWithUUID(String originalFileName) {
+        String uuid = UUID.randomUUID().toString();
+
+        // Handle files with extensions (e.g., myphoto.jpg)
+        int dotIndex = originalFileName.lastIndexOf(".");
+        if (dotIndex != -1) {
+            String name = originalFileName.substring(0, dotIndex);
+            String extension = originalFileName.substring(dotIndex); // includes the dot
+            return name + "_" + uuid + extension;
+        }
+
+        // For files with no extension
+        return originalFileName + "_" + uuid;
+    }
+
 
 
 }
