@@ -51,8 +51,8 @@ public class S3ServiceV2 {
     }
 
     public PresignedUrlResponse getValidPresignedUrlForUpload(MultipartFile file) {
-
-        if (file == null || file.isEmpty()) {
+        log.info("file{} {}",file.isEmpty(), file.getSize());
+        if (file.isEmpty() || file.getSize()==0){
            throw new EmptyFileException("File is null or empty");
         }
 
