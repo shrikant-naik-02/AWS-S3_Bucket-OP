@@ -102,7 +102,7 @@ public class S3ServiceV2 {
             throw new FileAlreadyExistsException("File already exists with name: " + objName);
         }
 
-        commonAWSOp.uploadFileWithPresignedUrl(file, presignedUrl);
+        commonAWSOp.uploadFileWithPresignedUrl(file, presignedUrl, objName);
 
         return objName;
     }

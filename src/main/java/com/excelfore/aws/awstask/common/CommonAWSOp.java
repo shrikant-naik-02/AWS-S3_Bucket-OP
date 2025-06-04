@@ -119,7 +119,7 @@ public class CommonAWSOp {
         }
     }
 
-    public void uploadFileWithPresignedUrl(MultipartFile file, String presignedUrl) {
+    public void uploadFileWithPresignedUrl(MultipartFile file, String presignedUrl, String objName) {
 
         // Have To Check The Logic That Presigned Url Expired Or Not
 
@@ -139,6 +139,7 @@ public class CommonAWSOp {
             }
 
             if (response.statusCode() == 200) {
+                // my db code
                 return;
             }
 
