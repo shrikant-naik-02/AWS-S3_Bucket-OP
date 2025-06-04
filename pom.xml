@@ -58,12 +58,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<version>3.3.12</version>
 			<scope>test</scope>
-			<exclusions>
-				<exclusion>
-					<groupId>org.xmlunit</groupId>
-					<artifactId>xmlunit-core</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 
 		<dependency>
