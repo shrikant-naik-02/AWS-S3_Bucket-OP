@@ -1,0 +1,21 @@
+<configuration>
+    <appender name="JSON_FILE" class="ch.qos.logback.core.FileAppender">
+        <file>logs/spring-boot-app.log</file>
+        <encoder>
+            <pattern>
+                {
+                "timestamp": "%date{ISO8601}",
+                "level": "%level",
+                "logger": "%logger",
+                "message": "%message",
+                "thread": "%thread",
+                "exception": "%ex{full}"
+                }
+            </pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="JSON_FILE" />
+    </root>
+</configuration>
