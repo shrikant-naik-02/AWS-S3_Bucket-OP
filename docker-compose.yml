@@ -1,0 +1,7 @@
+services:
+  log-reader:
+    image: amazoncorretto:21
+    container_name: log-reader-container
+    volumes:
+      - ./logs:/app/logs
+    command: tail -f /app/logs/spring-boot-app.log
