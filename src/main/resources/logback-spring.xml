@@ -1,6 +1,7 @@
 <configuration>
     <appender name="JSON_FILE" class="ch.qos.logback.core.FileAppender">
         <file>logs/spring-boot-app.log</file>
+        <immediateFlush>true</immediateFlush>
         <encoder>
             <pattern>
                 {

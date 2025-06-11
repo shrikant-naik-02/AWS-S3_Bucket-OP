@@ -5,3 +5,12 @@ services:
     volumes:
       - ./logs:/app/logs
     command: tail -f /app/logs/spring-boot-app.log
+
+  fluentd:
+    image: fluent/fluentd:v1.15-debian-1
+    container_name: fluentd-container
+    volumes:
+      - ./logs:/app/logs
+      - ./fluentd/fluent.conf:/fluentd/etc/fluent.conf
+      - ./fluentd/log:/fluentd/log  # for pos_file storage
+    command: [ "fluentd", "-c", "/fluentd/etc/fluent.conf", "-v" ]
