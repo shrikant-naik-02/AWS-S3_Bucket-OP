@@ -4,6 +4,7 @@
         <immediateFlush>true</immediateFlush>
         <encoder>
             <pattern>
+                \n
                 {
                 "timestamp": "%date{ISO8601}",
                 "level": "%level",

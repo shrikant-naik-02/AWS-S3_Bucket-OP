@@ -1,313 +1,835 @@
-{
-                "timestamp": "2025-06-11 17:08:47,570",
+
+
+                {
+                "timestamp": "2025-06-12 15:35:07,911",
                 "level": "INFO",
                 "logger": "com.excelfore.aws.awstask.AwsTaskApplication",
-                "message": "Starting AwsTaskApplication using Java 21.0.6 with PID 230237 (/home/shrikantnaik/Java Journey/June-V2/AwsTaskV2-clean/target/classes started by shrikantnaik in /home/shrikantnaik/Java Journey/June-V2/AwsTaskV2-clean)",
+                "message": "Starting AwsTaskApplication using Java 21.0.6 with PID 85505 (/home/shrikantnaik/Java Journey/June-V2/AwsTaskV2-clean/target/classes started by shrikantnaik in /home/shrikantnaik/Java Journey/June-V2/AwsTaskV2-clean)",
                 "thread": "restartedMain",
                 "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:08:47,589",
-                "level": "INFO",
-                "logger": "com.excelfore.aws.awstask.AwsTaskApplication",
-                "message": "No active profile set, falling back to 1 default profile: "default"",
-                "thread": "restartedMain",
-                "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:08:48,124",
-                "level": "INFO",
-                "logger": "org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor",
-                "message": "Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable",
-                "thread": "restartedMain",
-                "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:08:48,124",
-                "level": "INFO",
-                "logger": "org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor",
-                "message": "For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'",
-                "thread": "restartedMain",
-                "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:08:51,641",
-                "level": "INFO",
-                "logger": "org.springframework.data.repository.config.RepositoryConfigurationDelegate",
-                "message": "Bootstrapping Spring Data JPA repositories in DEFAULT mode.",
-                "thread": "restartedMain",
-                "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:08:51,847",
-                "level": "INFO",
-                "logger": "org.springframework.data.repository.config.RepositoryConfigurationDelegate",
-                "message": "Finished Spring Data repository scanning in 171 ms. Found 1 JPA repository interface.",
-                "thread": "restartedMain",
-                "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:08:54,347",
-                "level": "INFO",
-                "logger": "org.springframework.boot.web.embedded.tomcat.TomcatWebServer",
-                "message": "Tomcat initialized with port 8080 (http)",
-                "thread": "restartedMain",
-                "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:08:54,406",
-                "level": "INFO",
-                "logger": "org.apache.coyote.http11.Http11NioProtocol",
-                "message": "Initializing ProtocolHandler ["http-nio-8080"]",
-                "thread": "restartedMain",
-                "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:08:54,416",
-                "level": "INFO",
-                "logger": "org.apache.catalina.core.StandardService",
-                "message": "Starting service [Tomcat]",
-                "thread": "restartedMain",
-                "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:08:54,417",
-                "level": "INFO",
-                "logger": "org.apache.catalina.core.StandardEngine",
-                "message": "Starting Servlet engine: [Apache Tomcat/10.1.41]",
-                "thread": "restartedMain",
-                "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:08:54,652",
-                "level": "INFO",
-                "logger": "org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]",
-                "message": "Initializing Spring embedded WebApplicationContext",
-                "thread": "restartedMain",
-                "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:08:54,664",
-                "level": "INFO",
-                "logger": "org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext",
-                "message": "Root WebApplicationContext: initialization completed in 6526 ms",
-                "thread": "restartedMain",
-                "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:08:55,404",
-                "level": "INFO",
-                "logger": "org.hibernate.jpa.internal.util.LogHelper",
-                "message": "HHH000204: Processing PersistenceUnitInfo [name: default]",
-                "thread": "restartedMain",
-                "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:08:55,631",
-                "level": "INFO",
-                "logger": "org.hibernate.Version",
-                "message": "HHH000412: Hibernate ORM core version 6.5.2.Final",
-                "thread": "restartedMain",
-                "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:08:55,785",
-                "level": "INFO",
-                "logger": "org.hibernate.cache.internal.RegionFactoryInitiator",
-                "message": "HHH000026: Second-level cache disabled",
-                "thread": "restartedMain",
-                "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:08:57,231",
-                "level": "INFO",
-                "logger": "org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo",
-                "message": "No LoadTimeWeaver setup: ignoring JPA class transformer",
-                "thread": "restartedMain",
-                "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:09:09,178",
-                "level": "INFO",
-                "logger": "com.excelfore.aws.awstask.AwsTaskApplication",
-                "message": "Starting AwsTaskApplication using Java 21.0.6 with PID 230451 (/home/shrikantnaik/Java Journey/June-V2/AwsTaskV2-clean/target/classes started by shrikantnaik in /home/shrikantnaik/Java Journey/June-V2/AwsTaskV2-clean)",
-                "thread": "restartedMain",
-                "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:09:09,200",
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:07,920",
                 "level": "INFO",
                 "logger": "com.excelfore.aws.awstask.AwsTaskApplication",
                 "message": "No active profile set, falling back to 1 default profile: "default"",
                 "thread": "restartedMain",
                 "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:09:09,527",
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:08,187",
                 "level": "INFO",
                 "logger": "org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor",
                 "message": "Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable",
                 "thread": "restartedMain",
                 "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:09:09,531",
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:08,187",
                 "level": "INFO",
                 "logger": "org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor",
                 "message": "For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'",
                 "thread": "restartedMain",
                 "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:09:13,599",
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:12,603",
                 "level": "INFO",
                 "logger": "org.springframework.data.repository.config.RepositoryConfigurationDelegate",
                 "message": "Bootstrapping Spring Data JPA repositories in DEFAULT mode.",
                 "thread": "restartedMain",
                 "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:09:14,281",
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:13,059",
                 "level": "INFO",
                 "logger": "org.springframework.data.repository.config.RepositoryConfigurationDelegate",
-                "message": "Finished Spring Data repository scanning in 543 ms. Found 1 JPA repository interface.",
+                "message": "Finished Spring Data repository scanning in 397 ms. Found 1 JPA repository interface.",
                 "thread": "restartedMain",
                 "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:09:17,430",
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:17,329",
                 "level": "INFO",
                 "logger": "org.springframework.boot.web.embedded.tomcat.TomcatWebServer",
                 "message": "Tomcat initialized with port 8080 (http)",
                 "thread": "restartedMain",
                 "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:09:17,497",
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:17,397",
                 "level": "INFO",
                 "logger": "org.apache.coyote.http11.Http11NioProtocol",
                 "message": "Initializing ProtocolHandler ["http-nio-8080"]",
                 "thread": "restartedMain",
                 "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:09:17,512",
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:17,409",
                 "level": "INFO",
                 "logger": "org.apache.catalina.core.StandardService",
                 "message": "Starting service [Tomcat]",
                 "thread": "restartedMain",
                 "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:09:17,517",
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:17,410",
                 "level": "INFO",
                 "logger": "org.apache.catalina.core.StandardEngine",
                 "message": "Starting Servlet engine: [Apache Tomcat/10.1.41]",
                 "thread": "restartedMain",
                 "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:09:17,811",
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:17,632",
                 "level": "INFO",
                 "logger": "org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]",
                 "message": "Initializing Spring embedded WebApplicationContext",
                 "thread": "restartedMain",
                 "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:09:17,829",
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:17,638",
                 "level": "INFO",
                 "logger": "org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext",
-                "message": "Root WebApplicationContext: initialization completed in 8279 ms",
+                "message": "Root WebApplicationContext: initialization completed in 9444 ms",
                 "thread": "restartedMain",
                 "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:09:18,980",
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:18,470",
                 "level": "INFO",
                 "logger": "org.hibernate.jpa.internal.util.LogHelper",
                 "message": "HHH000204: Processing PersistenceUnitInfo [name: default]",
                 "thread": "restartedMain",
                 "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:09:19,189",
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:18,661",
                 "level": "INFO",
                 "logger": "org.hibernate.Version",
                 "message": "HHH000412: Hibernate ORM core version 6.5.2.Final",
                 "thread": "restartedMain",
                 "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:09:19,311",
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:18,788",
                 "level": "INFO",
                 "logger": "org.hibernate.cache.internal.RegionFactoryInitiator",
                 "message": "HHH000026: Second-level cache disabled",
                 "thread": "restartedMain",
                 "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:09:21,643",
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:20,342",
                 "level": "INFO",
                 "logger": "org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo",
                 "message": "No LoadTimeWeaver setup: ignoring JPA class transformer",
                 "thread": "restartedMain",
                 "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:09:22,111",
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:20,473",
                 "level": "INFO",
                 "logger": "com.zaxxer.hikari.HikariDataSource",
                 "message": "HikariPool-1 - Starting...",
                 "thread": "restartedMain",
                 "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:09:28,382",
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:22,136",
                 "level": "INFO",
                 "logger": "com.zaxxer.hikari.pool.HikariPool",
-                "message": "HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@f901dba",
+                "message": "HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@15d36c7c",
                 "thread": "restartedMain",
                 "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:09:28,402",
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:22,141",
                 "level": "INFO",
                 "logger": "com.zaxxer.hikari.HikariDataSource",
                 "message": "HikariPool-1 - Start completed.",
                 "thread": "restartedMain",
                 "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:09:28,808",
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:22,270",
                 "level": "WARN",
                 "logger": "org.hibernate.orm.deprecation",
                 "message": "HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)",
                 "thread": "restartedMain",
                 "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:09:34,714",
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:26,609",
                 "level": "INFO",
                 "logger": "org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator",
                 "message": "HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)",
                 "thread": "restartedMain",
                 "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:09:34,868",
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:26,804",
                 "level": "INFO",
                 "logger": "org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean",
                 "message": "Initialized JPA EntityManagerFactory for persistence unit 'default'",
                 "thread": "restartedMain",
                 "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:09:40,965",
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:30,838",
                 "level": "WARN",
                 "logger": "org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration",
                 "message": "spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning",
                 "thread": "restartedMain",
                 "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:09:41,890",
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:31,057",
                 "level": "INFO",
                 "logger": "org.springframework.validation.beanvalidation.OptionalValidatorFactoryBean",
                 "message": "Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.",
                 "thread": "restartedMain",
                 "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:09:43,887",
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:32,408",
                 "level": "INFO",
                 "logger": "org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer",
                 "message": "LiveReload server is running on port 35729",
                 "thread": "restartedMain",
                 "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:09:43,984",
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:32,473",
                 "level": "INFO",
                 "logger": "org.apache.coyote.http11.Http11NioProtocol",
                 "message": "Starting ProtocolHandler ["http-nio-8080"]",
                 "thread": "restartedMain",
                 "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:09:44,045",
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:32,532",
                 "level": "INFO",
                 "logger": "org.springframework.boot.web.embedded.tomcat.TomcatWebServer",
                 "message": "Tomcat started on port 8080 (http) with context path '/'",
                 "thread": "restartedMain",
                 "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:09:44,116",
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:32,620",
                 "level": "INFO",
                 "logger": "com.excelfore.aws.awstask.AwsTaskApplication",
-                "message": "Started AwsTaskApplication in 37.474 seconds (process running for 40.434)",
+                "message": "Started AwsTaskApplication in 27.624 seconds (process running for 30.397)",
                 "thread": "restartedMain",
                 "exception": ""
-                }{
-                "timestamp": "2025-06-11 17:09:44,130",
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:32,645",
+                "level": "INFO",
+                "logger": "com.excelfore.aws.awstask.AwsTaskApplication",
+                "message": "Working",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:50,216",
+                "level": "INFO",
+                "logger": "org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean",
+                "message": "Closing JPA EntityManagerFactory for persistence unit 'default'",
+                "thread": "SpringApplicationShutdownHook",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:50,222",
+                "level": "INFO",
+                "logger": "com.zaxxer.hikari.HikariDataSource",
+                "message": "HikariPool-1 - Shutdown initiated...",
+                "thread": "SpringApplicationShutdownHook",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:50,269",
+                "level": "INFO",
+                "logger": "com.zaxxer.hikari.HikariDataSource",
+                "message": "HikariPool-1 - Shutdown completed.",
+                "thread": "SpringApplicationShutdownHook",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:59,205",
+                "level": "INFO",
+                "logger": "com.excelfore.aws.awstask.AwsTaskApplication",
+                "message": "Starting AwsTaskApplication using Java 21.0.6 with PID 85626 (/home/shrikantnaik/Java Journey/June-V2/AwsTaskV2-clean/target/classes started by shrikantnaik in /home/shrikantnaik/Java Journey/June-V2/AwsTaskV2-clean)",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:59,224",
+                "level": "INFO",
+                "logger": "com.excelfore.aws.awstask.AwsTaskApplication",
+                "message": "No active profile set, falling back to 1 default profile: "default"",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:59,588",
+                "level": "INFO",
+                "logger": "org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor",
+                "message": "Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:35:59,589",
+                "level": "INFO",
+                "logger": "org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor",
+                "message": "For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:03,735",
+                "level": "INFO",
+                "logger": "org.springframework.data.repository.config.RepositoryConfigurationDelegate",
+                "message": "Bootstrapping Spring Data JPA repositories in DEFAULT mode.",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:03,999",
+                "level": "INFO",
+                "logger": "org.springframework.data.repository.config.RepositoryConfigurationDelegate",
+                "message": "Finished Spring Data repository scanning in 229 ms. Found 1 JPA repository interface.",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:07,073",
+                "level": "INFO",
+                "logger": "org.springframework.boot.web.embedded.tomcat.TomcatWebServer",
+                "message": "Tomcat initialized with port 8080 (http)",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:07,119",
+                "level": "INFO",
+                "logger": "org.apache.coyote.http11.Http11NioProtocol",
+                "message": "Initializing ProtocolHandler ["http-nio-8080"]",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:07,127",
+                "level": "INFO",
+                "logger": "org.apache.catalina.core.StandardService",
+                "message": "Starting service [Tomcat]",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:07,128",
+                "level": "INFO",
+                "logger": "org.apache.catalina.core.StandardEngine",
+                "message": "Starting Servlet engine: [Apache Tomcat/10.1.41]",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:07,329",
+                "level": "INFO",
+                "logger": "org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]",
+                "message": "Initializing Spring embedded WebApplicationContext",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:07,335",
+                "level": "INFO",
+                "logger": "org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext",
+                "message": "Root WebApplicationContext: initialization completed in 7738 ms",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:08,131",
+                "level": "INFO",
+                "logger": "org.hibernate.jpa.internal.util.LogHelper",
+                "message": "HHH000204: Processing PersistenceUnitInfo [name: default]",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:08,409",
+                "level": "INFO",
+                "logger": "org.hibernate.Version",
+                "message": "HHH000412: Hibernate ORM core version 6.5.2.Final",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:08,532",
+                "level": "INFO",
+                "logger": "org.hibernate.cache.internal.RegionFactoryInitiator",
+                "message": "HHH000026: Second-level cache disabled",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:09,898",
+                "level": "INFO",
+                "logger": "org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo",
+                "message": "No LoadTimeWeaver setup: ignoring JPA class transformer",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:09,994",
+                "level": "INFO",
+                "logger": "com.zaxxer.hikari.HikariDataSource",
+                "message": "HikariPool-1 - Starting...",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:11,656",
+                "level": "INFO",
+                "logger": "com.zaxxer.hikari.pool.HikariPool",
+                "message": "HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1b6e3faf",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:11,667",
+                "level": "INFO",
+                "logger": "com.zaxxer.hikari.HikariDataSource",
+                "message": "HikariPool-1 - Start completed.",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:11,848",
+                "level": "WARN",
+                "logger": "org.hibernate.orm.deprecation",
+                "message": "HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:15,759",
+                "level": "INFO",
+                "logger": "org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator",
+                "message": "HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:15,893",
+                "level": "INFO",
+                "logger": "org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean",
+                "message": "Initialized JPA EntityManagerFactory for persistence unit 'default'",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:19,868",
+                "level": "WARN",
+                "logger": "org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration",
+                "message": "spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:20,068",
+                "level": "INFO",
+                "logger": "org.springframework.validation.beanvalidation.OptionalValidatorFactoryBean",
+                "message": "Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:21,939",
+                "level": "INFO",
+                "logger": "org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer",
+                "message": "LiveReload server is running on port 35729",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:22,009",
+                "level": "INFO",
+                "logger": "org.apache.coyote.http11.Http11NioProtocol",
+                "message": "Starting ProtocolHandler ["http-nio-8080"]",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:22,063",
+                "level": "INFO",
+                "logger": "org.springframework.boot.web.embedded.tomcat.TomcatWebServer",
+                "message": "Tomcat started on port 8080 (http) with context path '/'",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:22,111",
+                "level": "INFO",
+                "logger": "com.excelfore.aws.awstask.AwsTaskApplication",
+                "message": "Started AwsTaskApplication in 26.165 seconds (process running for 29.036)",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:22,136",
+                "level": "INFO",
+                "logger": "com.excelfore.aws.awstask.AwsTaskApplication",
+                "message": "Working",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:27,527",
+                "level": "INFO",
+                "logger": "org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean",
+                "message": "Closing JPA EntityManagerFactory for persistence unit 'default'",
+                "thread": "SpringApplicationShutdownHook",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:27,533",
+                "level": "INFO",
+                "logger": "com.zaxxer.hikari.HikariDataSource",
+                "message": "HikariPool-1 - Shutdown initiated...",
+                "thread": "SpringApplicationShutdownHook",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:27,562",
+                "level": "INFO",
+                "logger": "com.zaxxer.hikari.HikariDataSource",
+                "message": "HikariPool-1 - Shutdown completed.",
+                "thread": "SpringApplicationShutdownHook",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:37,864",
+                "level": "INFO",
+                "logger": "com.excelfore.aws.awstask.AwsTaskApplication",
+                "message": "Starting AwsTaskApplication using Java 21.0.6 with PID 85733 (/home/shrikantnaik/Java Journey/June-V2/AwsTaskV2-clean/target/classes started by shrikantnaik in /home/shrikantnaik/Java Journey/June-V2/AwsTaskV2-clean)",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:37,876",
+                "level": "INFO",
+                "logger": "com.excelfore.aws.awstask.AwsTaskApplication",
+                "message": "No active profile set, falling back to 1 default profile: "default"",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:38,249",
+                "level": "INFO",
+                "logger": "org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor",
+                "message": "Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:38,249",
+                "level": "INFO",
+                "logger": "org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor",
+                "message": "For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:42,025",
+                "level": "INFO",
+                "logger": "org.springframework.data.repository.config.RepositoryConfigurationDelegate",
+                "message": "Bootstrapping Spring Data JPA repositories in DEFAULT mode.",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:42,244",
+                "level": "INFO",
+                "logger": "org.springframework.data.repository.config.RepositoryConfigurationDelegate",
+                "message": "Finished Spring Data repository scanning in 188 ms. Found 1 JPA repository interface.",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:44,886",
+                "level": "INFO",
+                "logger": "org.springframework.boot.web.embedded.tomcat.TomcatWebServer",
+                "message": "Tomcat initialized with port 8080 (http)",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:44,942",
+                "level": "INFO",
+                "logger": "org.apache.coyote.http11.Http11NioProtocol",
+                "message": "Initializing ProtocolHandler ["http-nio-8080"]",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:44,951",
+                "level": "INFO",
+                "logger": "org.apache.catalina.core.StandardService",
+                "message": "Starting service [Tomcat]",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:44,952",
+                "level": "INFO",
+                "logger": "org.apache.catalina.core.StandardEngine",
+                "message": "Starting Servlet engine: [Apache Tomcat/10.1.41]",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:45,141",
+                "level": "INFO",
+                "logger": "org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]",
+                "message": "Initializing Spring embedded WebApplicationContext",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:45,147",
+                "level": "INFO",
+                "logger": "org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext",
+                "message": "Root WebApplicationContext: initialization completed in 6891 ms",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:45,926",
+                "level": "INFO",
+                "logger": "org.hibernate.jpa.internal.util.LogHelper",
+                "message": "HHH000204: Processing PersistenceUnitInfo [name: default]",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:46,179",
+                "level": "INFO",
+                "logger": "org.hibernate.Version",
+                "message": "HHH000412: Hibernate ORM core version 6.5.2.Final",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:46,324",
+                "level": "INFO",
+                "logger": "org.hibernate.cache.internal.RegionFactoryInitiator",
+                "message": "HHH000026: Second-level cache disabled",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:47,740",
+                "level": "INFO",
+                "logger": "org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo",
+                "message": "No LoadTimeWeaver setup: ignoring JPA class transformer",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:47,822",
+                "level": "INFO",
+                "logger": "com.zaxxer.hikari.HikariDataSource",
+                "message": "HikariPool-1 - Starting...",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:49,353",
+                "level": "INFO",
+                "logger": "com.zaxxer.hikari.pool.HikariPool",
+                "message": "HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@75522dd1",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:49,361",
+                "level": "INFO",
+                "logger": "com.zaxxer.hikari.HikariDataSource",
+                "message": "HikariPool-1 - Start completed.",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:49,474",
+                "level": "WARN",
+                "logger": "org.hibernate.orm.deprecation",
+                "message": "HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:53,636",
+                "level": "INFO",
+                "logger": "org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator",
+                "message": "HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:53,779",
+                "level": "INFO",
+                "logger": "org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean",
+                "message": "Initialized JPA EntityManagerFactory for persistence unit 'default'",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:57,734",
+                "level": "WARN",
+                "logger": "org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration",
+                "message": "spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:57,913",
+                "level": "INFO",
+                "logger": "org.springframework.validation.beanvalidation.OptionalValidatorFactoryBean",
+                "message": "Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:59,156",
+                "level": "INFO",
+                "logger": "org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer",
+                "message": "LiveReload server is running on port 35729",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:59,223",
+                "level": "INFO",
+                "logger": "org.apache.coyote.http11.Http11NioProtocol",
+                "message": "Starting ProtocolHandler ["http-nio-8080"]",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:59,273",
+                "level": "INFO",
+                "logger": "org.springframework.boot.web.embedded.tomcat.TomcatWebServer",
+                "message": "Tomcat started on port 8080 (http) with context path '/'",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:59,323",
+                "level": "INFO",
+                "logger": "com.excelfore.aws.awstask.AwsTaskApplication",
+                "message": "Started AwsTaskApplication in 24.941 seconds (process running for 28.896)",
+                "thread": "restartedMain",
+                "exception": ""
+                }
+
+                {
+                "timestamp": "2025-06-12 15:36:59,340",
                 "level": "INFO",
                 "logger": "com.excelfore.aws.awstask.AwsTaskApplication",
                 "message": "Working",

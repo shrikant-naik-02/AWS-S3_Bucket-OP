@@ -5,6 +5,8 @@ services:
     volumes:
       - ./logs:/app/logs
     command: tail -f /app/logs/spring-boot-app.log
+    networks:
+      - graylog
 
   fluentd:
     image: fluent/fluentd:v1.15-debian-1
@@ -14,3 +16,54 @@ services:
       - ./fluentd/fluent.conf:/fluentd/etc/fluent.conf
       - ./fluentd/log:/fluentd/log  # for pos_file storage
     command: [ "fluentd", "-c", "/fluentd/etc/fluent.conf", "-v" ]
+    networks:
+      - graylog
+
+  mongo:
+    image: mongo:6
+    container_name: mongo
+    networks:
+      - graylog
+
+
+  opensearch:
+    image: opensearchproject/opensearch:2
+    container_name: opensearch
+    environment:
+      - discovery.type=single-node
+      - plugins.security.disabled=true
+      - bootstrap.memory_lock=true
+      - OPENSEARCH_JAVA_OPTS=-Xms512m -Xmx512m
+      - OPENSEARCH_INITIAL_ADMIN_PASSWORD=MyStrong@Password123
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    networks:
+      - graylog
+
+  graylog:
+    image: graylog/graylog:5.2
+    container_name: graylog
+    depends_on:
+      - mongo
+      - opensearch
+    environment:
+      - GRAYLOG_PASSWORD_SECRET=someRandomSecureKey123!
+      - GRAYLOG_ROOT_PASSWORD_SHA2=af3182a24140c61d5e892989223dc8e4bed0d31e63f11c93d4b4ef84e56da6cd
+      - GRAYLOG_HTTP_EXTERNAL_URI=http://localhost:9000/
+      - GRAYLOG_ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    volumes:
+      - graylog_data:/usr/share/graylog/data  # <--- Add this
+    ports:
+      - "9000:9000"
+      - "12201:12201/udp"
+    networks:
+      - graylog
+
+networks:
+  graylog:
+    driver: bridge
+
+volumes:
+  graylog_data:  # <-- Declare volume here
